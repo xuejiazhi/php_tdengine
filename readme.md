@@ -1,5 +1,5 @@
-
-平常创建表方法：
+#平常创建表方法：
+```
         //变量：
         $params = [
                     [
@@ -25,8 +25,9 @@
                              ->setTable("wslog_6")        //设置哪个表
                             ->createTableAsStable("sdv_workstation_log", 4);  //超级表，和tag的值 
 
-
- 正常插入数据：
+```
+#正常插入数据：
+```
           //定义采集站所需要的字段规则
           $wslog_NeedRule  = [
                               //不允许为空的
@@ -49,9 +50,10 @@
           ->setTable("wslog_4")      //设置哪个表
           ->setRule($wslog_NeedRule)  //设置规则
           ->addData($data);           //增加数据   
-          
-          
- 插入数据，没有子表的情况下自己创建子表：
+ ```
+   
+#插入数据，没有子表的情况下自己创建子表：
+```
       //定义采集站所需要的字段规则
       $wslog_NeedRule  = [
                             //不允许为空的
@@ -76,9 +78,10 @@
                   ->setTable("wslog_4")      //设置哪个表
                   ->setRule($wslog_NeedRule)  //设置规则
                   ->addData($data);           //增加数据
-                  
+  ```
    
-查询功能
+#查询功能
+```
 data = TdengineOpt::factory("restful") //工厂方式调用，目前支持restful
           ->setDatabase("sdv_log") //设置数据库
           ->setTable("sdv_workstation_log")     //设置哪个表
@@ -113,6 +116,6 @@ WHERE
        约束：当为in 时，$value为数组[p1,p2,p3]，生成条件为 （key=p1 or key=p2 or key=p3）
        约束：当为between时，$value为数组[start,end]，至少是两个值，第一个为 start;第二个为 end,生成的条件为  key>=start and key <=end
     $join   当链式调用多个条件的情况下，用 and 和 or 来链接多个条件
-
+```
 
 
