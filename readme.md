@@ -1,4 +1,4 @@
-#平常创建表方法：
+# 平常创建表方法：
 ```
         //变量：
         $params = [
@@ -26,7 +26,7 @@
                             ->createTableAsStable("sdv_workstation_log", 4);  //超级表，和tag的值 
 
 ```
-#正常插入数据：
+# 正常插入数据：
 ```
           //定义采集站所需要的字段规则
           $wslog_NeedRule  = [
@@ -52,7 +52,7 @@
           ->addData($data);           //增加数据   
  ```
    
-#插入数据，没有子表的情况下自己创建子表：
+# 插入数据，没有子表的情况下自己创建子表：
 ```
       //定义采集站所需要的字段规则
       $wslog_NeedRule  = [
@@ -80,7 +80,7 @@
                   ->addData($data);           //增加数据
   ```
    
-#查询功能
+# 查询功能
 ```
 data = TdengineOpt::factory("restful") //工厂方式调用，目前支持restful
           ->setDatabase("sdv_log") //设置数据库
