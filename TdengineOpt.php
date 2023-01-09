@@ -36,7 +36,7 @@ class TdengineOpt
 class TdengineRestful implements TdengineOptInterface
 {
     //设置参数
-    private   $_tdIP = "10.104.15.99";
+    private   $_tdIP = "127.0.0.1";
     private   $_tdPort = "6020";
     //TDengine默认的用户名和密码
     private  $_userName = "root";
